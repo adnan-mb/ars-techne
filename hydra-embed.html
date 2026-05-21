@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hydra</title>
+    <script src="https://cdn.jsdelivr.net/npm/hydra-synth/dist/hydra-synth.js"></script>
+    <style>
+        body { margin: 0; padding: 0; overflow: hidden; }
+        #hydra-canvas {
+            width: 100vw;
+            height: 100vh;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Target Canvas -->
+    <canvas id="hydra-canvas"></canvas>
+
+    <script>
+        // Initialize Hydra on the canvas
+        const hydra = new Hydra({
+            canvas: document.getElementById("hydra-canvas"),
+            width: window.innerWidth,
+            height: window.innerHeight,
+            makeGlobal: true // Allows you to use functions like osc() and out() directly
+        })
+
+        // Run your Hydra sketch
+        osc(20, 0.1, 1.5).out()
+    </script>
+</body>
+</html>
