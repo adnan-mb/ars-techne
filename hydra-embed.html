@@ -23,11 +23,11 @@
         // Initialize Hydra on the canvas
         var hydra = new Hydra({
             canvas: document.getElementById("hydra-canvas"),
+            detectaudio: false,
             width: window.innerWidth,
             height: window.innerHeight,
             makeGlobal: true // Allows you to use functions like osc() and out() directly
         })
-
         // Run your Hydra sketch
         osc(20, 0.1, 1.5).out()
     </script>
