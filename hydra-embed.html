@@ -5,28 +5,16 @@
     <title>Hydra</title>
     <!-- Load Hydra from JSDelivr -->
     <script src="https://cdn.jsdelivr.net/npm/hydra-synth/dist/hydra-synth.js"></script>
-    <style>
-        body { margin: 0; padding: 0; overflow: hidden; }
-        #hydra-canvas {
-            width: 400vw;
-            height: 400vh;
-            display: block;
-        }
-    </style>
 </head>
 <body>
-
-    <!-- Target Canvas -->
-    <canvas id="hydra-canvas"></canvas>
+    <h1>Ejemplo Interactivo</h1> 
+    <canvas id="hydra-canvas" width="400px" height="400px"></canvas>
 
     <script>
         // Initialize Hydra on the canvas
         var hydra = new Hydra({
             canvas: document.getElementById("hydra-canvas"),
             detectaudio: false,
-            width: window.innerWidth,
-            height: window.innerHeight,
-            makeGlobal: true // Allows you to use functions like osc() and out() directly
         })
         // Run your Hydra sketch
         osc(20, 0.1, 1.5).out()
